@@ -20,4 +20,4 @@ jobs:
         uses: fermyon/actions/spin/deploy@v1
         with:
           manifest_file: test/spin.toml
-          fermyon_token: ${{ secrets.ljvIinpjqmSe6V4nrTepKyvbJFzRyNwtRhBZ4OQNBwIY0rdUDSUdkrr3siYIinZZ4FHIzukva8AgY9dWUJ5yt6koUuqqXu9YJOrnJbzUuAeKtKgFlmHsBbWbZ61WHwvL }}
+          fermyon_token: ${{ secrets.TEST }}
