@@ -1,0 +1,23 @@
+name: spin-deploy
+
+on:
+  - push
+
+jobs:
+  spin:
+    runs-on: ubuntu-latest
+    name: Build and deploy
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup `spin`
+        uses: fermyon/actions/spin/setup@v1
+        with:
+          version: canary
+          plugins: py2wasm
+
+      - name: build and deploy
+        uses: fermyon/actions/spin/deploy@v1
+        with:
+          manifest_file: test/spin.toml
+          fermyon_token: ${{ secrets.ljvIinpjqmSe6V4nrTepKyvbJFzRyNwtRhBZ4OQNBwIY0rdUDSUdkrr3siYIinZZ4FHIzukva8AgY9dWUJ5yt6koUuqqXu9YJOrnJbzUuAeKtKgFlmHsBbWbZ61WHwvL }}
